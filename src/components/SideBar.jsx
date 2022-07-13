@@ -42,7 +42,7 @@ const SideBar = ({ pageIndex }) => {
     >
       <VStack>
         <Image
-          src='assets/app_logo.png'
+          src='/assets/app_logo.png'
           alt='app_logo'
           boxSize='75px'
           objectFit='cover'

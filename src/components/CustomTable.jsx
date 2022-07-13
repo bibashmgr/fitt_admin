@@ -32,9 +32,10 @@ const CustomTable = ({ tableHeader, tableContent }) => {
         </TableCaption> */}
         <Thead>
           <Tr>
-            {tableHeader.map((header) => {
+            {tableHeader.map((header, index) => {
               return (
                 <Th
+                  key={index}
                   textAlign={header.id === 1 ? 'start' : 'center'}
                   textTransform={header.id === 1 ? 'uppercase' : 'capitalize'}
                 >
@@ -47,7 +48,7 @@ const CustomTable = ({ tableHeader, tableContent }) => {
         <Tbody>
           {tableContent.map((content, index) => {
             return (
-              <Tr>
+              <Tr key={index}>
                 <Td textAlign='start' fontSize='sm'>
                   {index < 10 && '0' + (index + 1)}
                 </Td>

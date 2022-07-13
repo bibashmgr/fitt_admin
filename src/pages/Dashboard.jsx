@@ -5,7 +5,7 @@ import { VStack, Grid } from '@chakra-ui/react';
 import MainLayout from '../layouts/MainLayout';
 
 // components:
-import CustomCard from '../components/Dashboard/CustomCard';
+import CustomCard from '../components/dashboard/CustomCard';
 
 // icons
 import { MdFitnessCenter } from 'react-icons/md';
