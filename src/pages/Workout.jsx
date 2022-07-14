@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   VStack,
   Flex,
@@ -22,6 +23,8 @@ import { tableHeader } from '../utils/tableHeader';
 import { workouts } from '../utils/dummyData.js';
 
 const Workout = () => {
+  const navigate = useNavigate();
+
   return (
     <MainLayout title='Workout' pageIndex={2}>
       <VStack spacing={5} align='start' w='100%'>
@@ -33,7 +36,11 @@ const Workout = () => {
             />
             <Input type='text' placeholder='Search' />
           </InputGroup>
-          <Button variant='outline' size='md'>
+          <Button
+            variant='outline'
+            size='md'
+            onClick={() => navigate('/workout/add')}
+          >
             Add
           </Button>
         </Flex>

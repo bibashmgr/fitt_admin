@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   VStack,
   Flex,
@@ -22,6 +23,8 @@ import { tableHeader } from '../utils/tableHeader.js';
 import { plans } from '../utils/dummyData.js';
 
 const Plan = () => {
+  const navigate = useNavigate();
+
   return (
     <MainLayout title='Plan' pageIndex={3}>
       <VStack spacing={5} align='start' w='100%'>
@@ -33,7 +36,11 @@ const Plan = () => {
             />
             <Input type='text' placeholder='Search' />
           </InputGroup>
-          <Button variant='outline' size='md'>
+          <Button
+            variant='outline'
+            size='md'
+            onClick={() => navigate('/plan/add')}
+          >
             Add
           </Button>
         </Flex>
