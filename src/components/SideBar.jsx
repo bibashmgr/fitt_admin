@@ -30,8 +30,9 @@ const SideBar = ({ pageIndex }) => {
 
   return (
     <Flex
+      position='fixed'
       direction='column'
-      minH='100vh'
+      h='100vh'
       w={{ base: '0px', md: '200px', lg: '250px' }}
       py={7}
       justify='space-between'
@@ -65,14 +66,14 @@ const SideBar = ({ pageIndex }) => {
                 <Icon
                   as={getIcon(item.title)}
                   boxSize='25px'
-                  color={index + 1 === pageIndex ? 'primaryColor' : 'darkColor'}
+                  color={index + 1 === pageIndex ? 'primaryColor' : 'gray.600'}
                 />
                 <Text
                   textTransform='capitalize'
                   ml={4}
                   fontSize='md'
                   fontWeight='semibold'
-                  color={index + 1 === pageIndex ? 'primaryColor' : 'darkColor'}
+                  color={index + 1 === pageIndex ? 'primaryColor' : 'gray.600'}
                 >
                   {item.title}
                 </Text>

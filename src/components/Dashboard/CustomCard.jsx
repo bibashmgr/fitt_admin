@@ -18,11 +18,13 @@ const CustomCard = ({ cardIcon, cardTitle, cardNumber }) => {
       templateColumns={{ base: 'repeat(2, 1fr)' }}
     >
       <Flex justify={{ base: 'start', sm: 'center' }} align='center'>
-        <Icon as={cardIcon} boxSize='35px' />
+        <Icon as={cardIcon} boxSize='35px' color='darkColor' />
       </Flex>
       <Stat>
-        <StatLabel>{cardTitle}</StatLabel>
-        <StatNumber>
+        <StatLabel color='darkColor' fontWeight='semibold'>
+          {cardTitle}
+        </StatLabel>
+        <StatNumber color='darkColor'>
           {cardNumber < 10 ? '0' + cardNumber : cardNumber}
         </StatNumber>
       </Stat>
